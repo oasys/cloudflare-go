@@ -317,6 +317,8 @@ func (api *API) CreateZone(ctx context.Context, name string, jumpstart bool, acc
 
 	if zoneType == "partial" {
 		newzone.Type = "partial"
+	} else if zoneType == "secondary" {
+		newzone.Type = "secondary"
 	} else {
 		newzone.Type = "full"
 	}
